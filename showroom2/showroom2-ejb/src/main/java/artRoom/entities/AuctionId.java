@@ -9,7 +9,7 @@ import javax.persistence.Embeddable;
 public class AuctionId implements Serializable {
 
 	private Integer idOwner;
-	private Integer idArt;
+	private Integer idArtwork;
 	private Date dateAuction;
 	private static final long serialVersionUID = 1L;
 
@@ -17,10 +17,10 @@ public class AuctionId implements Serializable {
 		// TODO Auto-generated constructor stub
 	}
 
-	public AuctionId(Integer idOwner, Integer idArt) {
+	public AuctionId(Integer idOwner, Integer idArtwork) {
 		super();
 		this.idOwner = idOwner;
-		this.idArt = idArt;
+		this.idArtwork = idArtwork;
 		this.dateAuction = new Date();
 	}
 
@@ -33,12 +33,12 @@ public class AuctionId implements Serializable {
 		this.idOwner = idOwner;
 	}
 
-	public Integer getIdArt() {
-		return idArt;
+	public Integer getidArtwork() {
+		return idArtwork;
 	}
 
-	public void setIdArt(Integer idArt) {
-		this.idArt = idArt;
+	public void setidArtwork(Integer idArtwork) {
+		this.idArtwork = idArtwork;
 	}
 
 	public Date getDateAuction() {
@@ -54,7 +54,7 @@ public class AuctionId implements Serializable {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((dateAuction == null) ? 0 : dateAuction.hashCode());
-		result = prime * result + ((idArt == null) ? 0 : idArt.hashCode());
+		result = prime * result + ((idArtwork == null) ? 0 : idArtwork.hashCode());
 		result = prime * result + ((idOwner == null) ? 0 : idOwner.hashCode());
 		return result;
 	}
@@ -73,10 +73,10 @@ public class AuctionId implements Serializable {
 				return false;
 		} else if (!dateAuction.equals(other.dateAuction))
 			return false;
-		if (idArt == null) {
-			if (other.idArt!= null)
+		if (idArtwork == null) {
+			if (other.idArtwork!= null)
 				return false;
-		} else if (!idArt.equals(other.idArt))
+		} else if (!idArtwork.equals(other.idArtwork))
 			return false;
 		if (idOwner == null) {
 			if (other.idOwner != null)

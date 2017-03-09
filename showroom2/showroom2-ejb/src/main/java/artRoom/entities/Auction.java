@@ -26,7 +26,7 @@ public class Auction implements Serializable {
 	private User owner;
 
 	@ManyToOne
-	@JoinColumn(name = "idArt", referencedColumnName = "idArtwork", updatable = false, insertable = false)
+	@JoinColumn(name = "idArtwork", referencedColumnName = "idArtwork", updatable = false, insertable = false)
 	private Artwork artwork;
 
 	

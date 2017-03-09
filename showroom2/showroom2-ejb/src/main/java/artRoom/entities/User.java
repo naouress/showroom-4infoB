@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.lang.Integer;
 import java.lang.Long;
 import java.lang.String;
+import java.util.List;
+
 import javax.persistence.*;
 
 /**
@@ -24,6 +26,15 @@ public class User implements Serializable {
 	private String email;
 	private Long phoneNumber;
 	private static final long serialVersionUID = 1L;
+	
+	@OneToMany(mappedBy="owner")
+	private List<Auction> auctions;
+	
+	@OneToMany(mappedBy="complainer")
+	private List<Complaint> complaints;
+	
+	@OneToMany(mappedBy="receiver")
+	private List<Complaint> responses;
 
 	public User() {
 		super();
@@ -39,6 +50,24 @@ public class User implements Serializable {
 		return this.password;
 	}
 
+	public List<Auction> getAuctions() {
+		return auctions;
+	}
+	public void setAuctions(List<Auction> auctions) {
+		this.auctions = auctions;
+	}
+	public List<Complaint> getComplaints() {
+		return complaints;
+	}
+	public void setComplaints(List<Complaint> complaints) {
+		this.complaints = complaints;
+	}
+	public List<Complaint> getResponses() {
+		return responses;
+	}
+	public void setResponses(List<Complaint> responses) {
+		this.responses = responses;
+	}
 	public void setPassword(String password) {
 		this.password = password;
 	}   

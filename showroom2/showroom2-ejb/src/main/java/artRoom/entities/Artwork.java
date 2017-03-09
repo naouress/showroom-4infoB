@@ -5,6 +5,8 @@ import java.lang.Boolean;
 import java.lang.Float;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
+
 import javax.persistence.*;
 
 /**
@@ -23,12 +25,22 @@ public class Artwork implements Serializable {
 	private Float price;
 	private Boolean disponibility;
 	private static final long serialVersionUID = 1L;
+	
+	@OneToMany(mappedBy="artwork")
+	private List<Auction> auctions;
 
+	
 	public Artwork() {
 		super();
 	}   
 	public Integer getIdArtwork() {
 		return this.idArtwork;
+	}
+	public List<Auction> getAuctions() {
+		return auctions;
+	}
+	public void setAuctions(List<Auction> auctions) {
+		this.auctions = auctions;
 	}
 
 	public void setIdArtwork(Integer idArtwork) {
