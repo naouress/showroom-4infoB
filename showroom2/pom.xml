@@ -92,5 +92,6 @@
     <module>showroom2-ejb</module>
     <module>showroom2-web</module>
     <module>showroom2-ear</module>
+    <module>showroom2-client</module>
   </modules>
 </project>

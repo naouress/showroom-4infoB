@@ -1,0 +1,10 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>showroom2</groupId>
+    <artifactId>showroom2</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>showroom2-client</groupId>
+  <artifactId>showroom2-client</artifactId>
+</project>
